@@ -1,0 +1,281 @@
+[gd_scene load_steps=20 format=3 uid="uid://4lxbm8y8s6xd"]
+
+[ext_resource type="FontFile" uid="uid://bp8t06enshiu1" path="res://assets/fonts/RaccoonSerif-Base.ttf" id="2_3n077"]
+[ext_resource type="FontFile" uid="uid://dk8gcj33wjlo0" path="res://assets/fonts/ClassicShit.ttf" id="2_q8ksg"]
+[ext_resource type="FontFile" uid="uid://bqqyq331t4gmd" path="res://assets/fonts/fude.ttf" id="3_bcaii"]
+[ext_resource type="FontFile" uid="uid://dskabbmunme06" path="res://assets/fonts/Abaddon Light.ttf" id="3_k7udd"]
+[ext_resource type="FontFile" uid="uid://whg4hkv32o2m" path="res://assets/fonts/AvenuePixelStroke-Regular.ttf" id="4_ma1bo"]
+[ext_resource type="FontFile" uid="uid://qx0rwuhkukyd" path="res://assets/fonts/CompassPro.ttf" id="4_s23fd"]
+[ext_resource type="FontFile" uid="uid://booj3g1h5oti6" path="res://assets/fonts/ThickPixels.ttf" id="5_t1jsu"]
+[ext_resource type="FontFile" uid="uid://bpa61m6okyf6j" path="res://assets/fonts/monogram-extended.ttf" id="5_y5x2a"]
+[ext_resource type="FontFile" uid="uid://4pfi67wfuaeu" path="res://assets/fonts/RaccoonSerif-Mini.ttf" id="6_q8gxj"]
+[ext_resource type="FontFile" uid="uid://cg7huh57swc4u" path="res://assets/fonts/XTypewriter-Regular.ttf" id="7_o715a"]
+[ext_resource type="FontFile" uid="uid://blx4i4slc51sn" path="res://assets/fonts/Habbo.ttf" id="7_wsn8a"]
+[ext_resource type="FontFile" uid="uid://e4jd83qgpxmw" path="res://assets/fonts/m5x7.ttf" id="8_6f8ds"]
+[ext_resource type="FontFile" uid="uid://cbb2xgcra3qf" path="res://assets/fonts/OperationNapalm-Regular.ttf" id="8_bpm3i"]
+[ext_resource type="FontFile" uid="uid://cwxp5s277wavk" path="res://assets/fonts/c64esque.ttf" id="10_j5bh6"]
+[ext_resource type="FontFile" uid="uid://flf25soi0hqd" path="res://assets/fonts/BIOSfontII.ttf" id="14_ek3lv"]
+[ext_resource type="FontFile" uid="uid://usxqbohs7eys" path="res://assets/fonts/Clarity.ttf" id="14_x8lnk"]
+[ext_resource type="FontFile" uid="uid://deygpurm8ikv8" path="res://assets/fonts/FirstTimeWriting.ttf" id="16_2qt1x"]
+[ext_resource type="FontFile" uid="uid://bxxyo5gjk8aci" path="res://assets/fonts/TWEENIESDODDLEBINES.ttf" id="16_4lguj"]
+[ext_resource type="FontFile" uid="uid://cmywuywkjj46q" path="res://assets/fonts/scribble1.ttf" id="17_yge25"]
+
+[node name="PanelContainer" type="PanelContainer"]
+offset_left = 20.0
+offset_top = 40.0
+offset_right = 437.0
+offset_bottom = 316.0
+
+[node name="CrispyCounter" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Resources" type="VBoxContainer" parent="CrispyCounter"]
+layout_mode = 2
+
+[node name="WaterMeter5" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter5"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s23fd")
+text = "Fancy, Dramatization: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter18" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter18"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter18"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bcaii")
+text = "Threat/Hostile: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter10" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter10"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter10"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ma1bo")
+theme_override_font_sizes/font_size = 24
+text = "Machine: The quick brown fox jump over the lazy dog"
+horizontal_alignment = 2
+
+[node name="WaterMeter23" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter23"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter23"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_t1jsu")
+text = "Machine/artificial/recording: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter19" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter19"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter19"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q8ksg")
+text = "Formal/Suit/PC: The quick brown fox jump over the lazy dog"
+horizontal_alignment = 2
+
+[node name="WaterMeter6" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter6"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3n077")
+text = "Old PC and Web/print:  The quick brown fox jump over the lazy dog 123.456.789.000
+"
+
+[node name="WaterMeter16" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter16"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter16"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("14_ek3lv")
+text = "BIOS/Machine: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter7" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter7"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_o715a")
+text = "Fields/archaic device: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter17" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter17"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter17"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_j5bh6")
+text = "The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter14" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter14"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter14"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_wsn8a")
+text = "Sharp/Interface: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter20" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter20"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter20"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_6f8ds")
+text = "Soft/Whisper: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter4" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter4"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter4"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_y5x2a")
+text = "Harsh/Whisper: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter2" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_q8gxj")
+text = "Querky/Whisper: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter8" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter8"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter8"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_x8lnk")
+theme_override_font_sizes/font_size = 8
+text = "Querky/Whisper: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter3" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter3"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k7udd")
+text = "Default/Dialog: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter26" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter26"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter26"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_2qt1x")
+text = "hand written: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter24" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter24"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter24"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_4lguj")
+text = "kid/Playful/song: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter22" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter22"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter22"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_yge25")
+text = "kid/drunk/mental/distress: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter12" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter12"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter12"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_bpm3i")
+text = "Industry - State - Tag: The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter25" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter25"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter25"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Missing Cursive Lettering"

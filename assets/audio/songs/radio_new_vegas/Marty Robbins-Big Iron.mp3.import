@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqnwe823r7tum"
+path="res://.godot/imported/Marty Robbins-Big Iron.mp3-cb97af984df3dcfe5435ae2a4248bea5.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Marty Robbins-Big Iron.mp3"
+dest_files=["res://.godot/imported/Marty Robbins-Big Iron.mp3-cb97af984df3dcfe5435ae2a4248bea5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

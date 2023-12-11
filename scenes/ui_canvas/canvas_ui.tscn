@@ -1,0 +1,220 @@
+[gd_scene load_steps=12 format=3 uid="uid://b5r5xjcw5t1ua"]
+
+[ext_resource type="Script" path="res://scripts/ui_canvas/canvas_ui.gd" id="1_jswlo"]
+[ext_resource type="PackedScene" uid="uid://b2fr4yd46d64j" path="res://scenes/ui_canvas/screens/travel_screen.tscn" id="2_fydh4"]
+[ext_resource type="Theme" uid="uid://dphb1w837rm2t" path="res://Assets/themes/pda.tres" id="3_esuj5"]
+[ext_resource type="PackedScene" uid="uid://cyo3tkcj2y1f2" path="res://scenes/ui_canvas/screens/exchange_screen.tscn" id="4_k145p"]
+[ext_resource type="Theme" uid="uid://dgoxaxwow6jex" path="res://Assets/themes/console.tres" id="5_a5eh0"]
+[ext_resource type="Script" path="res://scripts/ui_canvas/screens/debug_screen.gd" id="5_o4tu5"]
+[ext_resource type="Script" path="res://scripts/ui_canvas/screens/setting_screen.gd" id="6_j3cb4"]
+[ext_resource type="Material" uid="uid://cc4sfajbgfcr3" path="res://Assets/materials/sharpness.tres" id="7_x3jts"]
+[ext_resource type="Material" uid="uid://fpash1rpwmjw" path="res://Assets/materials/grain.tres" id="8_qj7r5"]
+[ext_resource type="Material" uid="uid://dc2yjmgibjdxb" path="res://Assets/materials/TV.tres" id="9_usirm"]
+[ext_resource type="PackedScene" uid="uid://cswmxwutnae8h" path="res://scenes/ui_canvas/screens/main_menu_screen.tscn" id="10_dewkn"]
+
+[node name="CanvasUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_jswlo")
+metadata/_edit_lock_ = true
+
+[node name="TravelScreen" parent="." instance=ExtResource("2_fydh4")]
+
+[node name="PDA" type="MarginContainer" parent="."]
+process_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_esuj5")
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 200
+metadata/_edit_lock_ = true
+
+[node name="MapScreen" type="Control" parent="PDA"]
+visible = false
+layout_mode = 2
+
+[node name="CaravanScreen" type="Control" parent="PDA"]
+visible = false
+layout_mode = 2
+
+[node name="TownScreen" type="Control" parent="PDA"]
+visible = false
+layout_mode = 2
+
+[node name="ExchangeScreen" parent="PDA" instance=ExtResource("4_k145p")]
+visible = false
+layout_mode = 2
+
+[node name="GameMenuScreen" type="Control" parent="PDA"]
+process_mode = 2
+visible = false
+layout_mode = 2
+
+[node name="SettingsScreen" type="Control" parent="PDA"]
+visible = false
+layout_mode = 2
+script = ExtResource("6_j3cb4")
+
+[node name="TabBar" type="TabBar" parent="PDA/SettingsScreen"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+tab_count = 3
+scrolling_enabled = false
+scroll_to_selected = false
+tab_0/title = "test"
+tab_1/title = "tes"
+tab_2/title = "ttest"
+
+[node name="MarginContainer" type="MarginContainer" parent="PDA/SettingsScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 130
+
+[node name="TabContainer" type="TabContainer" parent="PDA/SettingsScreen/MarginContainer"]
+layout_mode = 2
+
+[node name="Audio" type="Control" parent="PDA/SettingsScreen/MarginContainer/TabContainer"]
+layout_mode = 2
+
+[node name="Display" type="Control" parent="PDA/SettingsScreen/MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="ScreenFX" type="Control" parent="PDA"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Sharpeness" type="BackBufferCopy" parent="PDA/ScreenFX"]
+copy_mode = 2
+rect = Rect2(0, 0, 1920, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="PDA/ScreenFX/Sharpeness"]
+material = ExtResource("7_x3jts")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Grain" type="BackBufferCopy" parent="PDA/ScreenFX"]
+copy_mode = 2
+rect = Rect2(0, 0, 1920, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="PDA/ScreenFX/Grain"]
+material = ExtResource("8_qj7r5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TV" type="BackBufferCopy" parent="PDA/ScreenFX"]
+copy_mode = 2
+rect = Rect2(0, 0, 1920, 1080)
+
+[node name="ColorRect" type="ColorRect" parent="PDA/ScreenFX/TV"]
+material = ExtResource("9_usirm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DebugScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("5_a5eh0")
+script = ExtResource("5_o4tu5")
+
+[node name="Label" type="Label" parent="DebugScreen"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -13.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "paused"
+horizontal_alignment = 1
+
+[node name="CommandConsole" type="MarginContainer" parent="DebugScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75
+anchor_right = 0.25
+anchor_bottom = 1.0
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="DebugScreen/CommandConsole"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DebugScreen/CommandConsole/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugScreen/CommandConsole/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="DebugScreen/CommandConsole/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "MOSS - v0.1.0"
+editable = false
+wrap_mode = 1
+scroll_smooth = true
+caret_blink = true
+caret_draw_when_editable_disabled = true
+highlight_current_line = true
+
+[node name="LineEdit" type="LineEdit" parent="DebugScreen/CommandConsole/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/minimum_character_width = 25
+
+[node name="MainMenuScreen" parent="." instance=ExtResource("10_dewkn")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 1720.0
+offset_bottom = 880.0
+grow_horizontal = 1
+grow_vertical = 1

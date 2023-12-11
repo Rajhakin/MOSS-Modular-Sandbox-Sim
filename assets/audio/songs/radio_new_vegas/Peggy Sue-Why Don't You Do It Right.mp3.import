@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7cf4h62keqyp"
+path="res://.godot/imported/Peggy Sue-Why Don't You Do It Right.mp3-c8cbb33a0c5c0d8040d75436ee159416.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Peggy Sue-Why Don't You Do It Right.mp3"
+dest_files=["res://.godot/imported/Peggy Sue-Why Don't You Do It Right.mp3-c8cbb33a0c5c0d8040d75436ee159416.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

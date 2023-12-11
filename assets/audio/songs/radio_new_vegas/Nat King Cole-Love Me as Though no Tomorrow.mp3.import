@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djm6ohey8j1aj"
+path="res://.godot/imported/Nat King Cole-Love Me as Though no Tomorrow.mp3-fa3fcf15375f8adaa571115852571a79.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Nat King Cole-Love Me as Though no Tomorrow.mp3"
+dest_files=["res://.godot/imported/Nat King Cole-Love Me as Though no Tomorrow.mp3-fa3fcf15375f8adaa571115852571a79.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,214 @@
+[gd_scene load_steps=2 format=3 uid="uid://q08skx63ikop"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvhw5"]
+bg_color = Color(0, 0, 0.054902, 0.819608)
+
+[node name="ResourceDisplay" type="PanelContainer"]
+offset_left = 1707.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cvhw5")
+
+[node name="DigitalCounter" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+
+[node name="ResourceBG" type="VBoxContainer" parent="DigitalCounter"]
+layout_mode = 2
+
+[node name="MeterBG" type="HBoxContainer" parent="DigitalCounter/ResourceBG"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="DigitalCounter/ResourceBG/MeterBG"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DigitalCounter/ResourceBG/MeterBG"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 0.247059)
+theme_override_font_sizes/font_size = 29
+text = "888.888.888"
+
+[node name="MeterBG2" type="HBoxContainer" parent="DigitalCounter/ResourceBG"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="DigitalCounter/ResourceBG/MeterBG2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DigitalCounter/ResourceBG/MeterBG2"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 0.247059)
+theme_override_font_sizes/font_size = 29
+text = "888.888.888"
+
+[node name="MeterBG3" type="HBoxContainer" parent="DigitalCounter/ResourceBG"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="DigitalCounter/ResourceBG/MeterBG3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DigitalCounter/ResourceBG/MeterBG3"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 0.247059)
+theme_override_font_sizes/font_size = 29
+text = "888.888.888"
+
+[node name="MeterBG4" type="HBoxContainer" parent="DigitalCounter/ResourceBG"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="DigitalCounter/ResourceBG/MeterBG4"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DigitalCounter/ResourceBG/MeterBG4"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 0.247059)
+theme_override_font_sizes/font_size = 29
+text = "888.888.888"
+
+[node name="MeterBG5" type="HBoxContainer" parent="DigitalCounter/ResourceBG"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="DigitalCounter/ResourceBG/MeterBG5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DigitalCounter/ResourceBG/MeterBG5"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 0.247059)
+theme_override_font_sizes/font_size = 29
+text = "888.888.888"
+
+[node name="ResourceValue" type="VBoxContainer" parent="DigitalCounter"]
+layout_mode = 2
+
+[node name="WaterMeter" type="HBoxContainer" parent="DigitalCounter/ResourceValue"]
+layout_mode = 2
+alignment = 2
+
+[node name="DummyContainer" type="Container" parent="DigitalCounter/ResourceValue/WaterMeter"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DigitalCounter/ResourceValue/WaterMeter"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "100.000"
+
+[node name="CrispyCounter" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+
+[node name="ResourcesBG" type="VBoxContainer" parent="CrispyCounter"]
+layout_mode = 2
+
+[node name="MeterBG" type="HBoxContainer" parent="CrispyCounter/ResourcesBG"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CrispyCounter/ResourcesBG/MeterBG"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/ResourcesBG/MeterBG"]
+modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 0.247059)
+theme_override_font_sizes/font_size = 29
+text = "888.888.888"
+
+[node name="Resources" type="VBoxContainer" parent="CrispyCounter"]
+layout_mode = 2
+
+[node name="WaterMeter5" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+alignment = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Titles, Headers, Names
+The quick brown fox jump over the lazy dog"
+horizontal_alignment = 2
+
+[node name="WaterMeter" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+alignment = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+
+[node name="WaterMeter7" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+alignment = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter7"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Information, Interface"
+
+[node name="WaterMeter4" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+alignment = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter4"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="WaterMeter2" type="HBoxContainer" parent="CrispyCounter/Resources"]
+layout_mode = 2
+alignment = 2
+
+[node name="DummyContainer" type="Container" parent="CrispyCounter/Resources/WaterMeter2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CrispyCounter/Resources/WaterMeter2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "The quick brown fox jump over the lazy dog 123.456.789.000"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Playback: "
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Next"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+disabled = true
+text = "Stop"

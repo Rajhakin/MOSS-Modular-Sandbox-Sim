@@ -1,0 +1,153 @@
+[gd_scene load_steps=8 format=3 uid="uid://dx7fq3mbrha02"]
+
+[ext_resource type="Texture2D" uid="uid://tstl5gbnysx6" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_17.png" id="1_5ak87"]
+[ext_resource type="Script" path="res://scripts/ui_canvas/elements/exchange_results.gd" id="1_enwag"]
+[ext_resource type="Texture2D" uid="uid://bl1oncd7vie5i" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_37.png" id="2_ld8md"]
+[ext_resource type="Texture2D" uid="uid://dc15453uf0jnk" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_28.png" id="3_3ht87"]
+[ext_resource type="Texture2D" uid="uid://cccgfnusoqde2" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_38.png" id="4_duipq"]
+[ext_resource type="Texture2D" uid="uid://bbs2kk7dy6avc" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_004.png" id="4_qplri"]
+[ext_resource type="Texture2D" uid="uid://1xc0wwp0g635" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_29.png" id="5_3ix6y"]
+
+[node name="Summary" type="PanelContainer"]
+script = ExtResource("1_enwag")
+
+[node name="NetChange" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="NetChange"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NetChange/PanelContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Exchange Results/Summary"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NetChange"]
+layout_mode = 2
+alignment = 1
+
+[node name="Money" type="HBoxContainer" parent="NetChange/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Munny"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NetChange/HBoxContainer/Money"]
+layout_mode = 2
+texture = ExtResource("1_5ak87")
+expand_mode = 3
+
+[node name="Label2" type="Label" parent="NetChange/HBoxContainer/Money"]
+layout_mode = 2
+text = "0"
+
+[node name="Weight" type="HBoxContainer" parent="NetChange/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Weight Capacity"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NetChange/HBoxContainer/Weight"]
+layout_mode = 2
+texture = ExtResource("2_ld8md")
+
+[node name="Label" type="Label" parent="NetChange/HBoxContainer/Weight"]
+layout_mode = 2
+text = "0/0"
+
+[node name="Container" type="HBoxContainer" parent="NetChange/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Liquid Capacity"
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NetChange/HBoxContainer/Container"]
+layout_mode = 2
+texture = ExtResource("4_qplri")
+
+[node name="Label2" type="Label" parent="NetChange/HBoxContainer/Container"]
+layout_mode = 2
+text = "0/0"
+
+[node name="Volume" type="HBoxContainer" parent="NetChange/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Volume Capacity"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NetChange/HBoxContainer/Volume"]
+layout_mode = 2
+texture = ExtResource("3_3ht87")
+
+[node name="Label2" type="Label" parent="NetChange/HBoxContainer/Volume"]
+layout_mode = 2
+text = "0/0"
+
+[node name="ConfirmationDialog" type="MarginContainer" parent="NetChange"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="NetChange/ConfirmationDialog"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Deal" type="Button" parent="NetChange/ConfirmationDialog/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+disabled = true
+text = " "
+icon_alignment = 1
+expand_icon = true
+
+[node name="Leave" type="Button" parent="NetChange/ConfirmationDialog/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " "
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NetChange/ConfirmationDialog"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Deal" type="HBoxContainer" parent="NetChange/ConfirmationDialog/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NetChange/ConfirmationDialog/HBoxContainer/Deal"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_duipq")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="NetChange/ConfirmationDialog/HBoxContainer/Deal"]
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+text = "Deal"
+vertical_alignment = 1
+
+[node name="Leave" type="HBoxContainer" parent="NetChange/ConfirmationDialog/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NetChange/ConfirmationDialog/HBoxContainer/Leave"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_3ix6y")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="NetChange/ConfirmationDialog/HBoxContainer/Leave"]
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+text = "Leave"
+vertical_alignment = 1

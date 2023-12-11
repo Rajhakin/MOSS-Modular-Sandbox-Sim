@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dc2yjmgibjdxb"]
+
+[ext_resource type="Shader" path="res://assets/shaders/screen_shaders/TV.gdshader" id="1_ti6pd"]
+
+[resource]
+shader = ExtResource("1_ti6pd")
+shader_parameter/vertJerkOpt = 0.05
+shader_parameter/vertMovementOpt = 0.0
+shader_parameter/bottomStaticOpt = 0.1
+shader_parameter/bottomStaticStrenth = 0.25
+shader_parameter/scalinesOpt = 0.2
+shader_parameter/rgbOffsetOpt = 0.1
+shader_parameter/horzFuzzOpt = 0.15

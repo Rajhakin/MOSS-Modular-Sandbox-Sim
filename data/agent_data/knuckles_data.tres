@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=5 format=3 uid="uid://cf83uipo18mao"]
+
+[ext_resource type="Script" path="res://scripts/data/agent_data.gd" id="1_2k0ic"]
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_kdgb6"]
+[ext_resource type="Texture2D" uid="uid://83x671p0a3h6" path="res://assets/textures/user_interface/icons/Goods/ResIcon39.png" id="2_nljb6"]
+
+[sub_resource type="Resource" id="Resource_vcx17"]
+script = ExtResource("1_kdgb6")
+name = "Banana"
+description = ""
+category = "Aid"
+texture = ExtResource("2_nljb6")
+amount = 38.0
+value = 2.0
+perishable = false
+condition = 0
+lifeTime = 3
+decaySpeed = 1.0
+
+[resource]
+script = ExtResource("1_2k0ic")
+items = Array[ExtResource("1_kdgb6")]([SubResource("Resource_vcx17")])

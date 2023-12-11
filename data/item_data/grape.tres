@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://ct55aka5ltdu4"]
+
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_dbgs0"]
+[ext_resource type="Texture2D" uid="uid://d1enko1sbts48" path="res://assets/textures/user_interface/icons/Goods/ResIcon42.png" id="2_31vc4"]
+
+[resource]
+script = ExtResource("1_dbgs0")
+name = "Grape"
+description = ""
+category = "Aid"
+texture = ExtResource("2_31vc4")
+amount = 0.0
+value = 0.0
+perishable = false
+condition = 0
+lifeTime = 3
+decaySpeed = 1.0

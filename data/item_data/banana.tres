@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bpk0o82c1xrj1"]
+
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_ny4mf"]
+[ext_resource type="Texture2D" uid="uid://83x671p0a3h6" path="res://assets/textures/user_interface/icons/Goods/ResIcon39.png" id="2_dfajn"]
+
+[resource]
+script = ExtResource("1_ny4mf")
+name = "Banana"
+description = ""
+category = "Aid"
+texture = ExtResource("2_dfajn")
+amount = 0.0
+value = 0.0
+perishable = false
+condition = 0
+lifeTime = 3
+decaySpeed = 1.0

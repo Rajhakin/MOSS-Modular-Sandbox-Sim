@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1r3u774tfq7u"]
+
+[ext_resource type="Script" path="res://scripts/globals/audio_manager.gd" id="1_5k3r1"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_5k3r1")
+
+[node name="RadioBroadcast" type="AudioStreamPlayer" parent="."]
+bus = &"Radio"

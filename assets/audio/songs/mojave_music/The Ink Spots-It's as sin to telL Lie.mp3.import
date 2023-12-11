@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5bhguhbb84gu"
+path="res://.godot/imported/The Ink Spots-It's as sin to telL Lie.mp3-9ba1a4fbc130d4b607b568a832604ce0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/mojave_music/The Ink Spots-It's as sin to telL Lie.mp3"
+dest_files=["res://.godot/imported/The Ink Spots-It's as sin to telL Lie.mp3-9ba1a4fbc130d4b607b568a832604ce0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

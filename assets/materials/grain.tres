@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://fpash1rpwmjw"]
+
+[ext_resource type="Shader" path="res://assets/shaders/screen_shaders/Grain.gdshader" id="1_igrb2"]
+
+[resource]
+shader = ExtResource("1_igrb2")
+shader_parameter/colored = true
+shader_parameter/color_amount = 0.6
+shader_parameter/grain_amount = 0.025
+shader_parameter/grain_size = 1.6
+shader_parameter/lum_amount = 1.3

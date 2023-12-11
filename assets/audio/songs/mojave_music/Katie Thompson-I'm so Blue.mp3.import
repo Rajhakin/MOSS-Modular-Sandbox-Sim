@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcjpn0a72bjyw"
+path="res://.godot/imported/Katie Thompson-I'm so Blue.mp3-b6964f7d6d7fe1d1e9dcf1a69a3e2885.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/mojave_music/Katie Thompson-I'm so Blue.mp3"
+dest_files=["res://.godot/imported/Katie Thompson-I'm so Blue.mp3-b6964f7d6d7fe1d1e9dcf1a69a3e2885.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

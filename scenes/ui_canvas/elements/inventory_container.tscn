@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw2k6bqn1ih1p"]
+
+[ext_resource type="Texture2D" uid="uid://tstl5gbnysx6" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_17.png" id="1_4dnb5"]
+[ext_resource type="Script" path="res://scripts/ui_canvas/elements/inventory_container.gd" id="1_cr8el"]
+[ext_resource type="Texture2D" uid="uid://bl1oncd7vie5i" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_37.png" id="2_x2huu"]
+[ext_resource type="Texture2D" uid="uid://dc15453uf0jnk" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_28.png" id="3_a47dx"]
+[ext_resource type="Texture2D" uid="uid://bbs2kk7dy6avc" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_004.png" id="4_8sj2a"]
+
+[node name="Inventory" type="PanelContainer"]
+script = ExtResource("1_cr8el")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="TabBar" type="TabBar" parent="VBoxContainer"]
+layout_mode = 2
+tab_alignment = 1
+clip_tabs = false
+scrolling_enabled = false
+tab_count = 6
+tab_0/title = "All"
+tab_1/title = "Weapons"
+tab_2/title = "Apparel"
+tab_3/title = "Aid"
+tab_4/title = "Misc"
+tab_5/title = "Ammo"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="StatusBar" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/StatusBar"]
+layout_mode = 2
+alignment = 1
+
+[node name="Money" type="HBoxContainer" parent="VBoxContainer/StatusBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Munny"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/StatusBar/HBoxContainer/Money"]
+layout_mode = 2
+texture = ExtResource("1_4dnb5")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/StatusBar/HBoxContainer/Money"]
+layout_mode = 2
+text = "0"
+
+[node name="Weight" type="HBoxContainer" parent="VBoxContainer/StatusBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Weight Capacity"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/StatusBar/HBoxContainer/Weight"]
+layout_mode = 2
+texture = ExtResource("2_x2huu")
+
+[node name="Label" type="Label" parent="VBoxContainer/StatusBar/HBoxContainer/Weight"]
+layout_mode = 2
+text = "0/0"
+
+[node name="Container" type="HBoxContainer" parent="VBoxContainer/StatusBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Liquid Capacity"
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/StatusBar/HBoxContainer/Container"]
+layout_mode = 2
+texture = ExtResource("4_8sj2a")
+
+[node name="Label" type="Label" parent="VBoxContainer/StatusBar/HBoxContainer/Container"]
+layout_mode = 2
+text = "0/0"
+
+[node name="Volume" type="HBoxContainer" parent="VBoxContainer/StatusBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Volume Capacity"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/StatusBar/HBoxContainer/Volume"]
+layout_mode = 2
+texture = ExtResource("3_a47dx")
+
+[node name="Label" type="Label" parent="VBoxContainer/StatusBar/HBoxContainer/Volume"]
+layout_mode = 2
+text = "0/0"

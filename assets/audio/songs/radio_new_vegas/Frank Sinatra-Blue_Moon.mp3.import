@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cm3dspljfr30m"
+path="res://.godot/imported/Frank Sinatra-Blue_Moon.mp3-fb27c8e9c1f30ca5e9520367a311246d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Frank Sinatra-Blue_Moon.mp3"
+dest_files=["res://.godot/imported/Frank Sinatra-Blue_Moon.mp3-fb27c8e9c1f30ca5e9520367a311246d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

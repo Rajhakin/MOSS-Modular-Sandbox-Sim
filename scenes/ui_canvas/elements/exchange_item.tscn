@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5t440v16tfvv"]
+
+[ext_resource type="Script" path="res://scripts/ui_canvas/elements/exchange_item.gd" id="1_qwl75"]
+[ext_resource type="Texture2D" uid="uid://b86etgculodnl" path="res://assets/textures/user_interface/icons/Goods/ResIcon28.png" id="2_nft53"]
+[ext_resource type="Texture2D" uid="uid://btkhe6is5nc1a" path="res://assets/textures/user_interface/icons/Native/GuiScrollArrowLeftHl.svg" id="3_1w5fv"]
+[ext_resource type="Texture2D" uid="uid://drhtbjwrwbxft" path="res://assets/textures/user_interface/icons/Native/GuiScrollArrowLeft.svg" id="4_wo1q5"]
+[ext_resource type="Texture2D" uid="uid://l7shlq8gi3it" path="res://assets/textures/user_interface/icons/Native/GuiScrollArrowRight.svg" id="5_4d25y"]
+[ext_resource type="Texture2D" uid="uid://co8vn01eelwqp" path="res://assets/textures/user_interface/icons/Native/GuiScrollArrowRightHl.svg" id="6_jcuyw"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gco1p"]
+blend_mode = 1
+
+[node name="ExchangeItem" type="HBoxContainer"]
+theme_override_constants/separation = 8
+script = ExtResource("1_qwl75")
+
+[node name="PanelContainer" type="MarginContainer" parent="."]
+material = SubResource("CanvasItemMaterial_gco1p")
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("2_nft53")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -5
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DecreaseButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_1w5fv")
+texture_hover = ExtResource("4_wo1q5")
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="IncreaseButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_4d25y")
+texture_hover = ExtResource("6_jcuyw")

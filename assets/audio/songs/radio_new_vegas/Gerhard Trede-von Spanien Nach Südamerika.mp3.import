@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7u584jk8ddsj"
+path="res://.godot/imported/Gerhard Trede-von Spanien Nach Südamerika.mp3-fa58407485e35c5a9902abaf8de97f81.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Gerhard Trede-von Spanien Nach Südamerika.mp3"
+dest_files=["res://.godot/imported/Gerhard Trede-von Spanien Nach Südamerika.mp3-fa58407485e35c5a9902abaf8de97f81.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

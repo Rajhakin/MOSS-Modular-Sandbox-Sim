@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://x0sgan38qa32"
+path="res://.godot/imported/Gerhard Trede-American Swing.mp3-7e61a069b562c0e67ba79c69cb6bedca.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Gerhard Trede-American Swing.mp3"
+dest_files=["res://.godot/imported/Gerhard Trede-American Swing.mp3-7e61a069b562c0e67ba79c69cb6bedca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

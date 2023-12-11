@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfgvqrddwcylg"
+path="res://.godot/imported/Pete Thomas-Sit and Dream.mp3-324ba960770d5094214d7f4dc7c5e1c2.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Pete Thomas-Sit and Dream.mp3"
+dest_files=["res://.godot/imported/Pete Thomas-Sit and Dream.mp3-324ba960770d5094214d7f4dc7c5e1c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://md50q8dd3w6o"
+path="res://.godot/imported/Bert Weedon-Roundhouse Rock.mp3-0e4988f2ed6ec63361cd75b75971baf4.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/mojave_music/Bert Weedon-Roundhouse Rock.mp3"
+dest_files=["res://.godot/imported/Bert Weedon-Roundhouse Rock.mp3-0e4988f2ed6ec63361cd75b75971baf4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

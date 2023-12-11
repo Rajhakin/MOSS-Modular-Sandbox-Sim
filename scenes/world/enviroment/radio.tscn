@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://chov81qwo76di"]
+
+[ext_resource type="AudioStream" uid="uid://b0x6r7abvlgfy" path="res://assets/audio/songs/mojave_music/Bert Weedon-Happy Times.mp3" id="1_d6434"]
+[ext_resource type="Script" path="res://scripts/world/radio.gd" id="2_876xo"]
+
+[node name="Radio" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_d6434")
+max_distance = 4000.0
+panning_strength = 2.0
+bus = &"Radio"
+script = ExtResource("2_876xo")

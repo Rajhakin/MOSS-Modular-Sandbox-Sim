@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://g1ffoofu3dtm"
+path="res://.godot/imported/Gerhard Trede-Hallo Mister X.mp3-0104ebc641365e2e9359c5f17a88b9a9.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Gerhard Trede-Hallo Mister X.mp3"
+dest_files=["res://.godot/imported/Gerhard Trede-Hallo Mister X.mp3-0104ebc641365e2e9359c5f17a88b9a9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

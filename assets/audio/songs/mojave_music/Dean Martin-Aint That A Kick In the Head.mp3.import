@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duxml255obrml"
+path="res://.godot/imported/Dean Martin-Aint That A Kick In the Head.mp3-82ffadd033ba6a40ecc42451ad4fb422.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/mojave_music/Dean Martin-Aint That A Kick In the Head.mp3"
+dest_files=["res://.godot/imported/Dean Martin-Aint That A Kick In the Head.mp3-82ffadd033ba6a40ecc42451ad4fb422.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

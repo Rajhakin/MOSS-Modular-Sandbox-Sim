@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ihpfoyfvku47"]
+
+[ext_resource type="Script" path="res://scripts/world/agent.gd" id="1_3u8sw"]
+[ext_resource type="Texture2D" uid="uid://2ql4ff8xp774" path="res://assets/textures/world/agent.tres" id="1_ia1nb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ry48j"]
+
+[node name="Agent" type="Area2D"]
+script = ExtResource("1_3u8sw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ry48j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ia1nb")

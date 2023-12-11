@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AgentData" load_steps=5 format=3 uid="uid://bd8bqejt27ebb"]
+
+[ext_resource type="Script" path="res://scripts/data/agent_data.gd" id="1_n2jwi"]
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_rx7fa"]
+[ext_resource type="Texture2D" uid="uid://d1enko1sbts48" path="res://assets/textures/user_interface/icons/Goods/ResIcon42.png" id="2_kf1k8"]
+
+[sub_resource type="Resource" id="Resource_ewmtl"]
+script = ExtResource("1_rx7fa")
+name = "Grape"
+description = ""
+category = "Aid"
+texture = ExtResource("2_kf1k8")
+amount = 25.0
+value = 4.0
+perishable = false
+condition = 0
+lifeTime = 3
+decaySpeed = 1.0
+
+[resource]
+script = ExtResource("1_n2jwi")
+items = Array[ExtResource("1_rx7fa")]([SubResource("Resource_ewmtl")])

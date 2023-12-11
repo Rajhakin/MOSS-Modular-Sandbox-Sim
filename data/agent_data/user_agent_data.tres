@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="AgentData" load_steps=2 format=3 uid="uid://lsrra53wwt7g"]
+
+[ext_resource type="Script" path="res://scripts/data/agent_data.gd" id="1_gr82f"]
+
+[resource]
+script = ExtResource("1_gr82f")
+items = Array[Resource("res://scripts/data/item_data.gd")]([])

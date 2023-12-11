@@ -1,0 +1,23 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=7 format=3 uid="uid://2rnr1ms67qrr"]
+
+[ext_resource type="AudioStream" uid="uid://fw84rhqkl5yt" path="res://assets/audio/sfx/ui/hacking/char/single/ui_hacking_charsingle_01.wav" id="1_asb33"]
+[ext_resource type="AudioStream" uid="uid://88cffm2wo1r3" path="res://assets/audio/sfx/ui/hacking/char/single/ui_hacking_charsingle_02.wav" id="2_pq3hn"]
+[ext_resource type="AudioStream" uid="uid://bnpoh140xmp30" path="res://assets/audio/sfx/ui/hacking/char/single/ui_hacking_charsingle_03.wav" id="3_0bg86"]
+[ext_resource type="AudioStream" uid="uid://dweh6xvkf6nel" path="res://assets/audio/sfx/ui/hacking/char/single/ui_hacking_charsingle_04.wav" id="4_ol3vr"]
+[ext_resource type="AudioStream" uid="uid://bq7ls142hnihh" path="res://assets/audio/sfx/ui/hacking/char/single/ui_hacking_charsingle_05.wav" id="5_jci0u"]
+[ext_resource type="AudioStream" uid="uid://d2m8mm2itomdu" path="res://assets/audio/sfx/ui/hacking/char/single/ui_hacking_charsingle_06.wav" id="6_itoun"]
+
+[resource]
+streams_count = 6
+stream_0/stream = ExtResource("1_asb33")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_pq3hn")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_0bg86")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_ol3vr")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_jci0u")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("6_itoun")
+stream_5/weight = 1.0

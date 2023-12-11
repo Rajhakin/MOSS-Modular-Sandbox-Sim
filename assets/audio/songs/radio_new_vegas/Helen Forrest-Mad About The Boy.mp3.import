@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drw4hytecgatv"
+path="res://.godot/imported/Helen Forrest-Mad About The Boy.mp3-62127f5f02cba0f3ff778d09ee55f4af.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/radio_new_vegas/Helen Forrest-Mad About The Boy.mp3"
+dest_files=["res://.godot/imported/Helen Forrest-Mad About The Boy.mp3-62127f5f02cba0f3ff778d09ee55f4af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

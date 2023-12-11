@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://clcmcj6g3pd1v"]
+
+[ext_resource type="Script" path="res://scripts/world/location.gd" id="1_udx53"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smakl"]
+
+[node name="Location" type="Area2D"]
+position = Vector2(0, -166)
+script = ExtResource("1_udx53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_smakl")

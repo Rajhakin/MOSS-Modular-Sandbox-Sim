@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8bavvtsp7tju"
+path="res://.godot/imported/Marty Robbins-Big Iron.mp3-b94b9943af8124bda105418165aa1ff1.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/mojave_music/Marty Robbins-Big Iron.mp3"
+dest_files=["res://.godot/imported/Marty Robbins-Big Iron.mp3-b94b9943af8124bda105418165aa1ff1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

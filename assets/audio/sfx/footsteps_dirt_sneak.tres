@@ -1,0 +1,35 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=11 format=3 uid="uid://p1b4xi3bs1y"]
+
+[ext_resource type="AudioStream" uid="uid://bk76ee8m3gipy" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_01.wav" id="1_npix0"]
+[ext_resource type="AudioStream" uid="uid://bunr7olhgs8vk" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_02.wav" id="2_sk765"]
+[ext_resource type="AudioStream" uid="uid://bec5gxvp4aga0" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_03.wav" id="3_8gw00"]
+[ext_resource type="AudioStream" uid="uid://c0kqhc2sd0tpd" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_04.wav" id="4_mg371"]
+[ext_resource type="AudioStream" uid="uid://bi3v0nauecdel" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_05.wav" id="5_e5ooa"]
+[ext_resource type="AudioStream" uid="uid://cps0yuadhj607" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_06.wav" id="6_6f64c"]
+[ext_resource type="AudioStream" uid="uid://bcbsj2hwnk7of" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_07.wav" id="7_3gi4o"]
+[ext_resource type="AudioStream" uid="uid://emqofieamcf1" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_08.wav" id="8_6hil6"]
+[ext_resource type="AudioStream" uid="uid://bqdsjwuuur02q" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_09.wav" id="9_xnr5u"]
+[ext_resource type="AudioStream" uid="uid://bmfn8y6xgsnk7" path="res://assets/audio/sfx/caravan/Footsteps/dirt/sneak/fst_dirt_sneak_10.wav" id="10_113yk"]
+
+[resource]
+streams_count = 10
+stream_0/stream = ExtResource("1_npix0")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_sk765")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_8gw00")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("4_mg371")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("5_e5ooa")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("6_6f64c")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("7_3gi4o")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("8_6hil6")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("9_xnr5u")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("10_113yk")
+stream_9/weight = 1.0

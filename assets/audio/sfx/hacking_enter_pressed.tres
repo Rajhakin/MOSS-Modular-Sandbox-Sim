@@ -1,0 +1,14 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://d0bynrmxffqxn"]
+
+[ext_resource type="AudioStream" uid="uid://bauc3pljfnuni" path="res://assets/audio/sfx/ui/hacking/char/enter/ui_hacking_charenter_01.wav" id="1_0xpp7"]
+[ext_resource type="AudioStream" uid="uid://dy1xfyvkld561" path="res://assets/audio/sfx/ui/hacking/char/enter/ui_hacking_charenter_02.wav" id="2_p6y0q"]
+[ext_resource type="AudioStream" uid="uid://bjt8gq2w2ydta" path="res://assets/audio/sfx/ui/hacking/char/enter/ui_hacking_charenter_03.wav" id="3_5427x"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_0xpp7")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_p6y0q")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("3_5427x")
+stream_2/weight = 1.0
