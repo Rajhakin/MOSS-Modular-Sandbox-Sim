@@ -16,13 +16,18 @@ PDA old margin = 200 on all sides, leaving this here until we have a world
 calendar might be useful rather than journal/quest log
 
 old radios were mono, should PDA sound be too?
+
+will screens be aways loaded or intenced on demand?
+
+consider eference scene and resource paths using:
+	export var resource_inst : Resource
+	rather than using Strings, or this preloader autoload
+	so paths don't brake when moving things
+		
+export(NodePath) var node_var_name: NodePath
+export node instead of get node so can move ui things aroound until nail it down
 """	
 
-var user_agent:
-	set(value):
-		user_agent = value
-		exchange_screen.user_agent_inv = value.inv_data
-		
 @onready var pda = $PDA	
 @onready var travel_screen = $TravelScreen
 @onready var map_screen = $PDA/MapScreen
@@ -36,10 +41,7 @@ var user_agent:
 
 
 func _ready():
-	var screens = [travel_screen, map_screen, caravan_screen, town_screen, exchange_screen]
-	for i in screens:
-		if i.has_signal("button_pressed"):
-			i.button_pressed.connect(on_travel_screen_button_pressed)
+	pass
 
 	# escape should call current screen close/fade out unless travel screen
 func on_travel_screen_button_pressed():

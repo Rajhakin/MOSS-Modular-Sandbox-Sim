@@ -1,18 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://ihpfoyfvku47"]
+[gd_scene load_steps=5 format=3 uid="uid://ihpfoyfvku47"]
 
 [ext_resource type="Script" path="res://scripts/world/agent.gd" id="1_3u8sw"]
 [ext_resource type="Texture2D" uid="uid://2ql4ff8xp774" path="res://assets/textures/world/agent.tres" id="1_ia1nb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ry48j"]
 
-[node name="Agent" type="Area2D"]
+[sub_resource type="Curve" id="Curve_ekafl"]
+_data = [Vector2(0.00347222, 0.985765), 0.0, 0.0, 0, 0, Vector2(0.996528, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Agent" type="Area2D" groups=["agents"]]
 script = ExtResource("1_3u8sw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ry48j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(2, 0)
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_ia1nb")
+
+[node name="DirectionalLines" type="Node2D" parent="."]
+visible = false
+
+[node name="MagNorthLine" type="Line2D" parent="DirectionalLines"]
+points = PackedVector2Array(0, 0, 35, 0)
+width = 4.0
+width_curve = SubResource("Curve_ekafl")
+default_color = Color(1, 0, 0.290196, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="GridNorthLine" type="Line2D" parent="DirectionalLines"]
+points = PackedVector2Array(0, 0, 35, 0)
+width = 4.0
+width_curve = SubResource("Curve_ekafl")
+default_color = Color(0.333333, 1, 0, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="MouseLine" type="Line2D" parent="DirectionalLines"]
+points = PackedVector2Array(0, 0, 35, 0)
+width = 4.0
+width_curve = SubResource("Curve_ekafl")
+default_color = Color(0, 0.513726, 1, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="SelectionRect" type="ReferenceRect" parent="."]
+visible = false
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+mouse_filter = 2
+border_color = Color(1, 1, 1, 1)
+border_width = 2.0
+editor_only = false

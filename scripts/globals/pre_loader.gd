@@ -8,7 +8,6 @@ const INVENTORY_ITEM = preload("res://scenes/ui_canvas/elements/inventory_item.t
 const EXCHANGE_ITEM = preload("res://scenes/ui_canvas/elements/exchange_item.tscn")
 # WORLD/UNITS
 const AGENT = preload("res://scenes/world/units/agent.tscn")
-const USER_AGENT = preload("res://scenes/world/units/user_agent.tscn")
 
 # SOUND/INTERFACE
 # caravaneer is inspired in the classic fallout games, interface included?
