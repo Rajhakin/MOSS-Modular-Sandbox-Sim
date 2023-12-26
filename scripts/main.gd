@@ -1,22 +1,31 @@
 extends Node
 
-# pause and game state is main responsibilty
-# other than that it just handle connectiong between world and ui
-
-# should main be a singleton?
+# responsibilties:
+# pause/game state 
+# connections between world and ui
+# save and load for now
 
 @onready var travel_screen = $CanvasUI/TravelScreen
-@onready var canvas_ui = %CanvasUI
+@onready var canvas_ui = $CanvasUI
+@onready var camera = $World/CameraPivot
 
 
 func _ready():
-	init_user_agent()
-	get_tree().paused = true
+	load_state()# move to init?
+	#get_tree().paused = true
+	
 
-# should this be _init?
-func init_user_agent():
-	var user_agent = %World.spawn_agent(load("res://World/Units/user_agent.tscn"))
-	%CanvasUI.user_agent = user_agent
-	user_agent.moved.connect(travel_screen.on_user_agent_moved)
-	travel_screen.clicked.connect(user_agent.on_travel_screen_clicked)
-	user_agent.area_entered.connect(canvas_ui.on_user_agent_area_entered)
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		save_state()
+		print("Close Requested")
+
+
+func load_state():
+	pass
+
+
+func save_state():
+	pass
+	
+	

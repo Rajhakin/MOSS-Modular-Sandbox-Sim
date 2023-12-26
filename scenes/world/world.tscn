@@ -1,76 +1,16 @@
-[gd_scene load_steps=68 format=3 uid="uid://c5veo81uir18y"]
+[gd_scene load_steps=72 format=3 uid="uid://c5veo81uir18y"]
 
 [ext_resource type="Script" path="res://scripts/world/world.gd" id="1_bljh5"]
-[ext_resource type="Texture2D" uid="uid://dwmrpkt3xcwda" path="res://assets/textures/world/texture_07.png" id="2_kmwkg"]
+[ext_resource type="Resource" uid="uid://lsrra53wwt7g" path="res://data/agent_data/user_agent_data.tres" id="2_0fptb"]
+[ext_resource type="Texture2D" uid="uid://c2vsfcdj0f3kf" path="res://assets/textures/world/texture_07.png" id="2_kmwkg"]
 [ext_resource type="PackedScene" uid="uid://ihpfoyfvku47" path="res://scenes/world/units/agent.tscn" id="3_6q4hy"]
-[ext_resource type="Texture2D" uid="uid://bopqwmad4j4nk" path="res://assets/textures/user_interface/Caravaneer-2-extended-map.png" id="3_kcyde"]
-[ext_resource type="Texture2D" uid="uid://bkyo4g56ed4ny" path="res://assets/textures/world/balancing.png" id="4_3a3kv"]
+[ext_resource type="Resource" uid="uid://cf83uipo18mao" path="res://data/agent_data/knuckles_data.tres" id="3_k4p7a"]
+[ext_resource type="Texture2D" uid="uid://bfnu6l7oeghrm" path="res://assets/textures/user_interface/Caravaneer-2-extended-map.png" id="3_kcyde"]
+[ext_resource type="Texture2D" uid="uid://ghufwthq1uki" path="res://assets/textures/world/balancing.png" id="4_3a3kv"]
+[ext_resource type="Resource" uid="uid://bd8bqejt27ebb" path="res://data/agent_data/maiden_data.tres" id="4_3m8ik"]
 [ext_resource type="PackedScene" uid="uid://clcmcj6g3pd1v" path="res://scenes/world/locations/location.tscn" id="4_pi7en"]
-[ext_resource type="Texture2D" uid="uid://b6oass71asp6" path="res://assets/textures/world/Knuckles.png" id="5_sfupg"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_csrw4"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(0, 0, 39, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_428oj"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(39, 0, 39, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6uvgk"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(78, 0, 39, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eqwyn"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(117, 0, 39, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kii56"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(156, 0, 39, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d5isx"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(195, 0, 39, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bxljo"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(234, 0, 39, 53)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0k8p4"]
-atlas = ExtResource("4_3a3kv")
-region = Rect2(273, 0, 39, 53)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_djfrr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_csrw4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_428oj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6uvgk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eqwyn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kii56")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d5isx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bxljo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0k8p4")
-}],
-"loop": true,
-"name": &"default",
-"speed": 7.0
-}]
+[ext_resource type="Texture2D" uid="uid://c14o8pvodfydi" path="res://assets/textures/world/Knuckles.png" id="5_sfupg"]
+[ext_resource type="Script" path="res://scripts/world/rts_camera.gd" id="8_sebg6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3d1ts"]
 atlas = ExtResource("5_sfupg")
@@ -430,6 +370,70 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_csrw4"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(0, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_428oj"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(39, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uvgk"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(78, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqwyn"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(117, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kii56"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(156, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5isx"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(195, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxljo"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(234, 0, 39, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k8p4"]
+atlas = ExtResource("4_3a3kv")
+region = Rect2(273, 0, 39, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djfrr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csrw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_428oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uvgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqwyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kii56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5isx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxljo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k8p4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_bljh5")
 
@@ -475,28 +479,35 @@ position = Vector2(-454, -325)
 
 [node name="Agents" type="Node2D" parent="."]
 
-[node name="Maiden" parent="Agents" instance=ExtResource("3_6q4hy")]
-position = Vector2(-100, 0)
+[node name="UserAgent" parent="Agents" instance=ExtResource("3_6q4hy")]
+data = ExtResource("2_0fptb")
 
-[node name="MaidenSprite" type="AnimatedSprite2D" parent="Agents/Maiden"]
+[node name="KnucklesAgent" parent="Agents" instance=ExtResource("3_6q4hy")]
+position = Vector2(100, 0)
+data = ExtResource("3_k4p7a")
+
+[node name="KnucklesSprite" type="AnimatedSprite2D" parent="Agents/KnucklesAgent"]
+visible = false
+position = Vector2(0, -15)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_ofenv")
+
+[node name="MaidenAgent" parent="Agents" instance=ExtResource("3_6q4hy")]
+position = Vector2(-100, 0)
+data = ExtResource("4_3m8ik")
+
+[node name="MaidenSprite" type="AnimatedSprite2D" parent="Agents/MaidenAgent"]
+visible = false
 position = Vector2(0, -26.5)
 sprite_frames = SubResource("SpriteFrames_djfrr")
 autoplay = "default"
 frame_progress = 0.264068
 
-[node name="Knuckles" parent="Agents" instance=ExtResource("3_6q4hy")]
-position = Vector2(100, 0)
-
-[node name="KnucklesSprite" type="AnimatedSprite2D" parent="Agents/Knuckles"]
-position = Vector2(0, -15)
-scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_ofenv")
-
-[node name="Marker2D" type="Marker2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="Marker2D"]
+[node name="CameraPivot" type="Marker2D" parent="."]
 process_mode = 3
-rotation = 1.5708
+script = ExtResource("8_sebg6")
+
+[node name="Camera2D" type="Camera2D" parent="CameraPivot"]
 ignore_rotation = false
 zoom = Vector2(2, 2)
 rotation_smoothing_enabled = true
