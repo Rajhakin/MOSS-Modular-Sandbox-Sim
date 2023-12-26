@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://caga5us7vfyak"]
+
+[ext_resource type="Script" path="res://scripts/ui_canvas/elements/7_segments_display.gd" id="1_psruc"]
+[ext_resource type="LabelSettings" uid="uid://gua3mm6w77rb" path="res://assets/fonts/E1234bg.tres" id="2_kbbhs"]
+[ext_resource type="LabelSettings" uid="uid://bmfjp4gn5vl48" path="res://assets/fonts/E1234.tres" id="3_qsoea"]
+
+[node name="Display" type="PanelContainer"]
+theme_type_variation = &"DisplayContainer"
+script = ExtResource("1_psruc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="_" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="BackgroundLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "8888"
+label_settings = ExtResource("2_kbbhs")
+vertical_alignment = 1
+
+[node name="ValueLabel" type="Label" parent="HBoxContainer/BackgroundLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("3_qsoea")
+vertical_alignment = 1
+
+[node name="_2" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2

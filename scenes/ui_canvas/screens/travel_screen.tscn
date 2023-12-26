@@ -1,132 +1,23 @@
-[gd_scene load_steps=18 format=3 uid="uid://b2fr4yd46d64j"]
+[gd_scene load_steps=22 format=3 uid="uid://b2fr4yd46d64j"]
 
+[ext_resource type="Theme" uid="uid://df7cwbg23lfnf" path="res://assets/themes/default.tres" id="1_4yy6x"]
 [ext_resource type="Script" path="res://scripts/ui_canvas/screens/travel_screen.gd" id="1_a6pp1"]
-[ext_resource type="Material" uid="uid://c6u7mux44627q" path="res://Assets/materials/blur.tres" id="2_jatin"]
-[ext_resource type="Texture2D" uid="uid://cjnsg5k6do41i" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_32.png" id="3_2ep7r"]
-[ext_resource type="Texture2D" uid="uid://47bpuf22283m" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_31.png" id="4_v0xqe"]
-[ext_resource type="Texture2D" uid="uid://6oh4bxy722dh" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_40.png" id="5_sc22x"]
-[ext_resource type="Texture2D" uid="uid://bbs2kk7dy6avc" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_004.png" id="6_3neux"]
-[ext_resource type="Texture2D" uid="uid://dgu633hk737to" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_11.png" id="7_mmybk"]
-[ext_resource type="Texture2D" uid="uid://fbsmjbnn0q87" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_22.png" id="8_r0553"]
-[ext_resource type="Texture2D" uid="uid://c5qqvunkt1qar" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_33.png" id="9_kpjou"]
-[ext_resource type="Texture2D" uid="uid://bi1gkukoyvbdr" path="res://assets/textures/user_interface/icons/Native/Pause.svg" id="10_xka15"]
-[ext_resource type="Texture2D" uid="uid://mk1wntd7ddpg" path="res://assets/textures/user_interface/icons/Native/Play.svg" id="11_md3fv"]
-[ext_resource type="Texture2D" uid="uid://m7chl723enf0" path="res://assets/textures/user_interface/icons/Native/Time.svg" id="12_qvh4n"]
-
-[sub_resource type="Curve" id="Curve_rfab8"]
-_data = [Vector2(0.00347222, 0.985765), 0.0, 0.0, 0, 0, Vector2(0.996528, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Animation" id="Animation_omeqy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TimePanel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1920, 1013)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ResourcePanel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(719.5, 1080)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ScreensPanel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-156, 1013)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Blur:material:shader_parameter/amount")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.5]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("ScreensPanel:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("TimePanel:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("ResourcePanel:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("MouseAngle:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Dark:color")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
+[ext_resource type="Material" uid="uid://c6u7mux44627q" path="res://assets/materials/blur.tres" id="2_jatin"]
+[ext_resource type="Texture2D" uid="uid://0ck405l211lr" path="res://assets/textures/user_interface/icons/boxicons/bx-slider.svg" id="3_66mlf"]
+[ext_resource type="LabelSettings" uid="uid://4kh7muwnstnv" path="res://assets/fonts/floating_text.tres" id="4_i6oav"]
+[ext_resource type="Texture2D" uid="uid://dkjh7rs3lh6uh" path="res://assets/textures/user_interface/icons/boxicons/bxs-package.svg" id="4_qkybq"]
+[ext_resource type="Texture2D" uid="uid://bjmk1nekp2mt" path="res://assets/textures/user_interface/icons/boxicons/bx-trip.svg" id="5_pk8i3"]
+[ext_resource type="Texture2D" uid="uid://b3d31hou3qlmr" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_004.png" id="6_3neux"]
+[ext_resource type="Texture2D" uid="uid://dci3vac8chdwo" path="res://assets/textures/user_interface/icons/boxicons/bx-restaurant.svg" id="7_dnkr7"]
+[ext_resource type="Texture2D" uid="uid://ciu5uv00wejtd" path="res://assets/textures/user_interface/icons/boxicons/bx-grass.svg" id="8_6ipn8"]
+[ext_resource type="Texture2D" uid="uid://bb8145ru70ko2" path="res://assets/textures/user_interface/icons/boxicons/bx-gas-pump.svg" id="9_hsrca"]
+[ext_resource type="PackedScene" uid="uid://caga5us7vfyak" path="res://scenes/ui_canvas/elements/7_segments_display.tscn" id="9_whsuf"]
+[ext_resource type="Texture2D" uid="uid://cmpxqbcnympsg" path="res://assets/textures/user_interface/icons/boxicons/bx-pause.svg" id="10_8nqgk"]
+[ext_resource type="Texture2D" uid="uid://j8pbmoxo0cmg" path="res://assets/textures/user_interface/icons/boxicons/bx-play.svg" id="11_drd0y"]
+[ext_resource type="Texture2D" uid="uid://bffjakaqaaobg" path="res://assets/textures/user_interface/icons/boxicons/bx-calendar.svg" id="12_u5hja"]
+[ext_resource type="Texture2D" uid="uid://bev8po77w283j" path="res://assets/textures/user_interface/icons/boxicons/bx-timer.svg" id="14_qwbin"]
+[ext_resource type="Texture2D" uid="uid://bqkuge6jvcls7" path="res://assets/textures/user_interface/icons/boxicons/bx-time.svg" id="15_whbfq"]
+[ext_resource type="Texture2D" uid="uid://bh2fy04tkdxrd" path="res://assets/textures/user_interface/icons/boxicons/bx-fast-forward.svg" id="20_3vljt"]
 
 [sub_resource type="Animation" id="Animation_6m66r"]
 resource_name = "fade_in"
@@ -142,7 +33,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(-156, 1013), Vector2(9, 1013)]
+"values": [Vector2(-156, 1080), Vector2(9, 1013)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -154,7 +45,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(719.5, 1080), Vector2(719.5, 1013)]
+"values": [Vector2(782, 1080), Vector2(782, 1013)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -166,7 +57,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(1920, 1013), Vector2(1596, 1013)]
+"values": [Vector2(1920, 1080), Vector2(1432, 1013)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -183,19 +74,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath(".:mouse_filter")
+tracks/4/path = NodePath("ScreensPanel:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.01),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ScreensPanel:modulate")
+tracks/5/path = NodePath("ResourcePanel:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -207,7 +98,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("ResourcePanel:modulate")
+tracks/6/path = NodePath("TimePanel:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -219,7 +110,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("TimePanel:modulate")
+tracks/7/path = NodePath("AngleLabel:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -231,22 +122,10 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("MouseAngle:modulate")
+tracks/8/path = NodePath("Dark:color")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(2, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Dark:color")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(2, 1),
 "update": 0,
@@ -267,7 +146,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(2, 1),
 "update": 0,
-"values": [Vector2(9, 1013), Vector2(-156, 1013)]
+"values": [Vector2(9, 1013), Vector2(-156, 1080)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -279,7 +158,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(2, 1),
 "update": 0,
-"values": [Vector2(719.5, 1013), Vector2(719.5, 1080)]
+"values": [Vector2(782, 1013), Vector2(782, 1080)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -291,7 +170,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(2, 1),
 "update": 0,
-"values": [Vector2(1596, 1013), Vector2(1920, 1013)]
+"values": [Vector2(1432, 1013), Vector2(1920, 1080)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -308,19 +187,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath(".:mouse_filter")
+tracks/4/path = NodePath("ScreensPanel:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.01),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ScreensPanel:modulate")
+tracks/5/path = NodePath("ResourcePanel:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -332,7 +211,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("ResourcePanel:modulate")
+tracks/6/path = NodePath("TimePanel:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -344,7 +223,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("TimePanel:modulate")
+tracks/7/path = NodePath("AngleLabel:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -356,22 +235,10 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("MouseAngle:modulate")
+tracks/8/path = NodePath("Dark:color")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Dark:color")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
@@ -380,7 +247,6 @@ tracks/9/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_26klq"]
 _data = {
-"RESET": SubResource("Animation_omeqy"),
 "fade_in": SubResource("Animation_6m66r"),
 "fade_out": SubResource("Animation_jpolv")
 }
@@ -393,8 +259,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_default_cursor_shape = 3
+mouse_filter = 2
+theme = ExtResource("1_4yy6x")
 script = ExtResource("1_a6pp1")
+metadata/_edit_lock_ = true
 
 [node name="Blur" type="ColorRect" parent="."]
 material = ExtResource("2_jatin")
@@ -419,23 +287,26 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="MouseAngle" type="Label" parent="."]
+[node name="AngleLabel" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 offset_right = 35.0
 offset_bottom = 26.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
 text = "360°"
+label_settings = ExtResource("4_i6oav")
+vertical_alignment = 1
 
 [node name="ScreensPanel" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -156.0
+offset_left = 9.0
 offset_top = -67.0
-offset_bottom = -9.0
+offset_right = 165.0
+offset_bottom = -8.99683
 grow_vertical = 0
+theme_type_variation = &"DisplayPanelContainer"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScreensPanel"]
 layout_mode = 2
@@ -449,20 +320,35 @@ layout_mode = 2
 theme_override_constants/separation = 9
 alignment = 1
 
-[node name="Button" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+[node name="SettingsButton" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+tooltip_text = "Settings"
 focus_mode = 0
-icon = ExtResource("3_2ep7r")
+theme_type_variation = &"DisplayButton"
+icon = ExtResource("3_66mlf")
+icon_alignment = 1
 
-[node name="Button2" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+[node name="CaravanButton" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+tooltip_text = "Inventory"
 focus_mode = 0
-icon = ExtResource("4_v0xqe")
+theme_type_variation = &"DisplayButton"
+icon = ExtResource("4_qkybq")
+icon_alignment = 1
 
-[node name="Button3" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+[node name="MapButton" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+tooltip_text = "Navigation"
 focus_mode = 0
-icon = ExtResource("5_sc22x")
+theme_type_variation = &"DisplayButton"
+icon = ExtResource("5_pk8i3")
+icon_alignment = 1
 
 [node name="ResourcePanel" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -471,16 +357,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -240.5
-offset_right = 240.5
-offset_bottom = 58.0
+offset_left = -178.0
+offset_top = -67.0
+offset_right = 178.001
+offset_bottom = -8.9917
 grow_horizontal = 2
 grow_vertical = 0
+theme_type_variation = &"DisplayPanelContainer"
 
 [node name="MarginContainer" type="MarginContainer" parent="ResourcePanel"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/margin_left = 9
 theme_override_constants/margin_top = 9
 theme_override_constants/margin_right = 9
 theme_override_constants/margin_bottom = 9
@@ -489,85 +376,79 @@ theme_override_constants/margin_bottom = 9
 layout_mode = 2
 theme_override_constants/separation = 9
 
-[node name="PanelContainer" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer"]
+modulate = Color(0.7, 0.7, 0.7, 1)
 layout_mode = 2
+tooltip_text = "Water"
 texture = ExtResource("6_3neux")
-expand_mode = 2
+expand_mode = 3
+stretch_mode = 3
 
-[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+[node name="WaterDisplay" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer" instance=ExtResource("9_whsuf")]
+unique_name_in_owner = true
 layout_mode = 2
-text = "100.000"
+display_type = "Thousand Separation"
+visible_characters = 7
 
-[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer/HBoxContainer"]
-custom_minimum_size = Vector2(9, 0)
-layout_mode = 2
-
-[node name="PanelContainer2" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+modulate = Color(0.701961, 0.701961, 0.701961, 1)
 layout_mode = 2
-texture = ExtResource("7_mmybk")
-expand_mode = 2
+tooltip_text = "Food"
+texture = ExtResource("7_dnkr7")
+expand_mode = 3
+stretch_mode = 3
 
-[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="FoodDisplay" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2" instance=ExtResource("9_whsuf")]
+unique_name_in_owner = true
 layout_mode = 2
-text = "100.000"
+display_type = "Thousand Separation"
+visible_characters = 7
 
-[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(9, 0)
-layout_mode = 2
-
-[node name="PanelContainer3" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer3"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3"]
+modulate = Color(0.7, 0.7, 0.7, 1)
 layout_mode = 2
-texture = ExtResource("8_r0553")
-expand_mode = 2
+tooltip_text = "Animal Food"
+texture = ExtResource("8_6ipn8")
+expand_mode = 3
+stretch_mode = 3
 
-[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer3/HBoxContainer"]
+[node name="GrassDisplay" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3" instance=ExtResource("9_whsuf")]
+unique_name_in_owner = true
 layout_mode = 2
-text = "100.000"
+display_type = "Thousand Separation"
+visible_characters = 7
 
-[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer3/HBoxContainer"]
-custom_minimum_size = Vector2(9, 0)
-layout_mode = 2
-
-[node name="PanelContainer4" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer4"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4"]
+modulate = Color(0.7, 0.7, 0.7, 1)
 layout_mode = 2
-texture = ExtResource("9_kpjou")
-expand_mode = 2
+tooltip_text = "Fuel"
+texture = ExtResource("9_hsrca")
+expand_mode = 3
+stretch_mode = 3
 
-[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer4/HBoxContainer"]
+[node name="FuelDisplay" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4" instance=ExtResource("9_whsuf")]
+unique_name_in_owner = true
 layout_mode = 2
-text = "100.000"
-
-[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/PanelContainer4/HBoxContainer"]
-custom_minimum_size = Vector2(9, 0)
-layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
 
 [node name="TimePanel" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -576,15 +457,16 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -488.0
 offset_top = -67.0
-offset_right = 315.0
-offset_bottom = -9.0
+offset_right = -8.99927
+offset_bottom = -8.9978
 grow_horizontal = 0
 grow_vertical = 0
+theme_type_variation = &"DisplayPanelContainer"
 
 [node name="MarginContainer" type="MarginContainer" parent="TimePanel"]
 layout_mode = 2
-theme_override_constants/margin_left = 9
 theme_override_constants/margin_top = 9
 theme_override_constants/margin_right = 9
 theme_override_constants/margin_bottom = 9
@@ -593,79 +475,87 @@ theme_override_constants/margin_bottom = 9
 layout_mode = 2
 theme_override_constants/separation = 9
 
-[node name="Button" type="Button" parent="TimePanel/MarginContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TimePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+tooltip_text = "Date"
+texture = ExtResource("12_u5hja")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="DateDisplay" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer" instance=ExtResource("9_whsuf")]
+unique_name_in_owner = true
+layout_mode = 2
+display_type = "Date"
+visible_characters = 8
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TimePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+tooltip_text = "Time"
+texture = ExtResource("15_whbfq")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="TimeDisplay" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer2" instance=ExtResource("9_whsuf")]
+unique_name_in_owner = true
+layout_mode = 2
+display_type = "Time"
+visible_characters = 5
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TimePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer3"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+tooltip_text = "Playback"
+texture = ExtResource("14_qwbin")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="PauseButton" type="Button" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 focus_mode = 0
+theme_type_variation = &"DisplayButton"
 toggle_mode = true
 icon_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="TimePanel/MarginContainer/HBoxContainer/Button"]
+[node name="TextureButton" type="TextureButton" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer3/PauseButton"]
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 focus_mode = 0
 mouse_filter = 1
 toggle_mode = true
-texture_normal = ExtResource("10_xka15")
-texture_pressed = ExtResource("11_md3fv")
+texture_normal = ExtResource("10_8nqgk")
+texture_pressed = ExtResource("11_drd0y")
 stretch_mode = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="TimePanel/MarginContainer/HBoxContainer"]
+[node name="_" type="Control" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(9, 0)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TimePanel/MarginContainer/HBoxContainer/PanelContainer"]
+[node name="FastForwardButton" type="Button" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-theme_override_constants/separation = 9
-
-[node name="_" type="Control" parent="TimePanel/MarginContainer/HBoxContainer/PanelContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="TimePanel/MarginContainer/HBoxContainer/PanelContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("12_qvh4n")
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="TimePanel/MarginContainer/HBoxContainer/PanelContainer/HBoxContainer"]
-layout_mode = 2
-text = "00/00/00 12:00"
-vertical_alignment = 1
-
-[node name="_2" type="Control" parent="TimePanel/MarginContainer/HBoxContainer/PanelContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="SpinBox" type="SpinBox" parent="TimePanel/MarginContainer/HBoxContainer"]
-layout_mode = 2
-step = 0.1
-value = 1.0
-alignment = 1
-prefix = "x"
-
-[node name="DirectionalLines" type="Marker2D" parent="."]
-
-[node name="MagNorthLine" type="Line2D" parent="DirectionalLines"]
-points = PackedVector2Array(0, 0, 35, 0)
-width = 4.0
-width_curve = SubResource("Curve_rfab8")
-default_color = Color(1, 0, 0.290196, 1)
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="GridNorthLine" type="Line2D" parent="DirectionalLines"]
-points = PackedVector2Array(0, 0, 35, 0)
-width = 4.0
-width_curve = SubResource("Curve_rfab8")
-default_color = Color(0.333333, 1, 0, 1)
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="MouseLine" type="Line2D" parent="DirectionalLines"]
-points = PackedVector2Array(0, 0, 35, 0)
-width = 4.0
-width_curve = SubResource("Curve_rfab8")
-default_color = Color(0, 0.513726, 1, 1)
-begin_cap_mode = 2
-end_cap_mode = 2
+focus_mode = 0
+theme_type_variation = &"DisplayButton"
+toggle_mode = true
+icon = ExtResource("20_3vljt")
+icon_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
