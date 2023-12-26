@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bmfjp4gn5vl48"]
+
+[ext_resource type="FontVariation" uid="uid://muajenemryw3" path="res://assets/fonts/E1234_var.tres" id="1_41uew"]
+
+[resource]
+font = ExtResource("1_41uew")
+font_size = 23

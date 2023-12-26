@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://gua3mm6w77rb"]
+
+[ext_resource type="FontVariation" uid="uid://muajenemryw3" path="res://assets/fonts/E1234_var.tres" id="1_vxiam"]
+
+[resource]
+font = ExtResource("1_vxiam")
+font_size = 23
+font_color = Color(1, 1, 1, 0.07)

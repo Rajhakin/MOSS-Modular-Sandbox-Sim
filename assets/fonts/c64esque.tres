@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dx0khtf8nbpw8"]
+
+[ext_resource type="FontFile" uid="uid://e05epnvjrdwx" path="res://assets/fonts/c64esque.ttf" id="1_7k6wu"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_7k6wu")
+font_size = 24

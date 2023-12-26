@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://muajenemryw3"]
+
+[ext_resource type="FontFile" uid="uid://cadn1hrxa7evt" path="res://assets/fonts/E1234.ttf" id="1_1vsqx"]
+
+[resource]
+base_font = ExtResource("1_1vsqx")
+spacing_glyph = -3
+spacing_space = -12
+spacing_bottom = -5

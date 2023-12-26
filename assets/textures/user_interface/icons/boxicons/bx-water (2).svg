@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 24 24"
+   fill="#ffffff"
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="bx-map.svg"
+   inkscape:export-filename="bx-water.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050" />
+  <path
+     d="m 12.535629,2.18584 c -0.320426,-0.2477867 -0.750832,-0.2477867 -1.071258,0 -0.280743,0.215 -6.8791373,5.7674427 -6.8523559,12.207443 0,4.411 3.3144347,7.606557 7.3879849,7.606557 4.07355,0 7.387985,-3.195557 7.387985,-7.601557 C 19.414765,7.9532827 12.816372,2.40084 12.535629,2.18584 Z M 12,19.99984 c -3.0558552,0 -5.5409887,-2.297557 -5.5409887,-5.611557 C 6.4396183,9.9502827 10.511321,5.57184 12,4.26484 c 1.487755,1.308 5.560382,5.6874427 5.540989,10.128443 0,3.309 -2.485134,5.606557 -5.540989,5.606557 z"
+     id="path2"
+     style="stroke-width:0.960988"
+     sodipodi:nodetypes="cccsccscccs" />
+</svg>

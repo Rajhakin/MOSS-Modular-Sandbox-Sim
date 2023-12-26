@@ -1,0 +1,327 @@
+[gd_scene load_steps=14 format=3 uid="uid://fmx58mis232s"]
+
+[ext_resource type="Texture2D" uid="uid://0ck405l211lr" path="res://assets/textures/user_interface/icons/boxicons/bx-slider.svg" id="1_bkye4"]
+[ext_resource type="Texture2D" uid="uid://dkjh7rs3lh6uh" path="res://assets/textures/user_interface/icons/boxicons/bxs-package.svg" id="2_7wb5g"]
+[ext_resource type="Texture2D" uid="uid://bjmk1nekp2mt" path="res://assets/textures/user_interface/icons/boxicons/bx-trip.svg" id="3_l765g"]
+[ext_resource type="Texture2D" uid="uid://b3d31hou3qlmr" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_004.png" id="4_myy5b"]
+[ext_resource type="LabelSettings" uid="uid://gua3mm6w77rb" path="res://assets/fonts/E1234bg.tres" id="5_kj28j"]
+[ext_resource type="LabelSettings" uid="uid://bmfjp4gn5vl48" path="res://assets/fonts/E1234.tres" id="6_5i8ow"]
+[ext_resource type="Texture2D" uid="uid://dci3vac8chdwo" path="res://assets/textures/user_interface/icons/boxicons/bx-restaurant.svg" id="7_qsl1i"]
+[ext_resource type="Texture2D" uid="uid://ciu5uv00wejtd" path="res://assets/textures/user_interface/icons/boxicons/bx-grass.svg" id="8_24ppy"]
+[ext_resource type="Texture2D" uid="uid://bb8145ru70ko2" path="res://assets/textures/user_interface/icons/boxicons/bx-gas-pump.svg" id="9_lsksb"]
+[ext_resource type="Texture2D" uid="uid://bffjakaqaaobg" path="res://assets/textures/user_interface/icons/boxicons/bx-calendar.svg" id="10_i6gvh"]
+[ext_resource type="Texture2D" uid="uid://bev8po77w283j" path="res://assets/textures/user_interface/icons/boxicons/bx-timer.svg" id="11_3cnq4"]
+[ext_resource type="Texture2D" uid="uid://cmpxqbcnympsg" path="res://assets/textures/user_interface/icons/boxicons/bx-pause.svg" id="12_5muw1"]
+[ext_resource type="Texture2D" uid="uid://j8pbmoxo0cmg" path="res://assets/textures/user_interface/icons/boxicons/bx-play.svg" id="13_erp13"]
+
+[node name="Control" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScreensPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ScreensPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreensPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="SettingsButton" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"DisplayButton"
+icon = ExtResource("1_bkye4")
+
+[node name="CaravanButton" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"DisplayButton"
+icon = ExtResource("2_7wb5g")
+
+[node name="MapButton" type="Button" parent="ScreensPanel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"DisplayButton"
+icon = ExtResource("3_l765g")
+
+[node name="ResourcePanel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ResourcePanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_myy5b")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DisplayContainer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "000 000"
+label_settings = ExtResource("5_kj28j")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/Label"]
+layout_mode = 2
+offset_right = 102.0
+offset_bottom = 22.0
+text = "123 456"
+label_settings = ExtResource("6_5i8ow")
+vertical_alignment = 1
+
+[node name="_2" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("7_qsl1i")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_type_variation = &"DisplayContainer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "000 000"
+label_settings = ExtResource("5_kj28j")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2/PanelContainer/HBoxContainer/Label"]
+layout_mode = 2
+offset_right = 102.0
+offset_bottom = 22.0
+text = "123 456"
+label_settings = ExtResource("6_5i8ow")
+vertical_alignment = 1
+
+[node name="_2" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer2/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("8_24ppy")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_type_variation = &"DisplayContainer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "000 000"
+label_settings = ExtResource("5_kj28j")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3/PanelContainer/HBoxContainer/Label"]
+layout_mode = 2
+offset_right = 102.0
+offset_bottom = 22.0
+text = "123 456"
+label_settings = ExtResource("6_5i8ow")
+vertical_alignment = 1
+
+[node name="_2" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer3/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("9_lsksb")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_type_variation = &"DisplayContainer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="_" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "000 000"
+label_settings = ExtResource("5_kj28j")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4/PanelContainer/HBoxContainer/Label"]
+layout_mode = 2
+offset_right = 102.0
+offset_bottom = 22.0
+text = "123 456"
+label_settings = ExtResource("6_5i8ow")
+vertical_alignment = 1
+
+[node name="_2" type="Control" parent="ResourcePanel/MarginContainer/HBoxContainer/HBoxContainer4/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="TimePanel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TimePanel"]
+layout_mode = 2
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TimePanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TimePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_i6gvh")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DisplayContainer"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="_" type="Control" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "00 00 00 00:00"
+label_settings = ExtResource("5_kj28j")
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer/Label"]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 22.0
+text = "12 34 56 78:90"
+label_settings = ExtResource("6_5i8ow")
+vertical_alignment = 1
+
+[node name="_2" type="Control" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TimePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("11_3cnq4")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="PauseButton" type="Button" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"DisplayButton"
+toggle_mode = true
+icon_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer2/PauseButton"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+mouse_filter = 1
+toggle_mode = true
+texture_normal = ExtResource("12_5muw1")
+texture_pressed = ExtResource("13_erp13")
+stretch_mode = 3
+
+[node name="_" type="Control" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(9, 0)
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="TimePanel/MarginContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+step = 0.1
+value = 1.0
+alignment = 1
+prefix = "x"

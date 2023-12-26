@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://4kh7muwnstnv"]
+
+[ext_resource type="FontFile" uid="uid://e05epnvjrdwx" path="res://assets/fonts/c64esque.ttf" id="1_w6o5w"]
+
+[resource]
+font = ExtResource("1_w6o5w")
+font_size = 24
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
