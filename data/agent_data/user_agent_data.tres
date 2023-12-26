@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_gr82f")
+name = "User"
 items = Array[Resource("res://scripts/data/item_data.gd")]([])

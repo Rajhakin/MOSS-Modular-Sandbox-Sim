@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cyo3tkcj2y1f2"]
+[gd_scene load_steps=9 format=3 uid="uid://cyo3tkcj2y1f2"]
 
 [ext_resource type="Script" path="res://scripts/ui_canvas/screens/exchange_screen.gd" id="1_w472f"]
-[ext_resource type="Resource" uid="uid://lsrra53wwt7g" path="res://data/agent_data/user_agent_data.tres" id="2_6ffou"]
 [ext_resource type="PackedScene" uid="uid://dw2k6bqn1ih1p" path="res://scenes/ui_canvas/elements/inventory_container.tscn" id="5_y07ue"]
 [ext_resource type="PackedScene" uid="uid://crxfib0b1myrd" path="res://scenes/ui_canvas/elements/exchange_container.tscn" id="6_h7kkr"]
 [ext_resource type="PackedScene" uid="uid://dx7fq3mbrha02" path="res://scenes/ui_canvas/elements/exchange_results.tscn" id="7_kaobl"]
@@ -213,7 +212,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w472f")
-user_agent_inv = ExtResource("2_6ffou")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -238,6 +236,7 @@ layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="CaravanGoods" parent="PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("5_y07ue")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="ExchangeArea" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer"]
@@ -251,15 +250,18 @@ size_flags_vertical = 3
 theme_override_constants/separation = 10
 
 [node name="Sell" parent="PanelContainer/MarginContainer/HBoxContainer/ExchangeArea/HBoxContainer" instance=ExtResource("6_h7kkr")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Buy" parent="PanelContainer/MarginContainer/HBoxContainer/ExchangeArea/HBoxContainer" instance=ExtResource("6_h7kkr")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Summary" parent="PanelContainer/MarginContainer/HBoxContainer/ExchangeArea" instance=ExtResource("7_kaobl")]
 layout_mode = 2
 
 [node name="TraderGoods" parent="PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("5_y07ue")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

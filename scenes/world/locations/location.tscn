@@ -4,7 +4,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_smakl"]
 
-[node name="Location" type="Area2D"]
+[node name="Location" type="Area2D" groups=["locations"]]
 position = Vector2(0, -166)
 script = ExtResource("1_udx53")
 
