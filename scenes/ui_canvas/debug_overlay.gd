@@ -12,8 +12,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if agent_data:
-		var text = "name: %s \nstatus: %s \nposition: %.v \nrotation: %s \nspeed: %s" % [
-					agent_data.name, agent_data.current_status, agent_data.position, agent_data.rotation, "null"]
+		var text = "name: %s \nstatus: %s \nposition: %.v \nrotation: %.3f \nspeed: %s" % [
+					agent_data.name, agent_data.current_status, agent_data.position, rad_to_deg(agent_data.rotation), "null"]
 		label.text = text
 	
 

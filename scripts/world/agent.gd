@@ -1,10 +1,9 @@
 extends Area2D
 class_name Agent
 
-# responsibilities:
-# handle user input when under user control, until find better place to handle it
-# navigation: moving from waypoint to waypoint and dodge things along the way
-# filling needs based on data.needs
+##  handle user input when under user control, until find better place to handle it
+##  navigation: moving from waypoint to waypoint and dodge things along the way
+##  filling needs based on data.needs
 
 @export var data := AgentData.new() 
 
@@ -21,6 +20,16 @@ func  _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	
  
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if data.current_status != Enums.AgentStatus.CONTROLLED:
+				get_viewport().set_input_as_handled()
+			elif data.current_status == Enums.AgentStatus.CONTROLLED:
+				set_course()
+				get_viewport().set_input_as_handled()
+				
+
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if data.current_status != Enums.AgentStatus.CONTROLLED:
@@ -28,6 +37,12 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				print("agent double clicked")
 				control_agent()
 				get_viewport().set_input_as_handled()
+			# - this is here so controlled agent don't move toward clicked
+			# 	agent when double clicking it 
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				print("agent clicked")
+				get_viewport().set_input_as_handled()
+				
 							
 
 func _mouse_enter() -> void:
@@ -78,7 +93,7 @@ func _physics_process(delta) -> void:
 	
 
 func move_forward(delta):
-	position += transform.x * 100 * delta
+	position += transform.x * 10 * delta
 	data.position = position
 
 
@@ -87,16 +102,11 @@ func _on_area_entered(area):
 		Events.user_agent_area_entered.emit(area)
 
 
-func set_course(direction):
+func set_course():
+	#rotation = get_local_mouse_position().rotated(rotation).angle()
+	#rotation = global_position.direction_to(get_global_mouse_position()).angle()
+	rotation = (get_global_mouse_position() - global_position).angle()
 	data.rotation = rotation
-	var angle_to_mouse = (get_global_mouse_position() - global_position).angle()
-	# not set but add difference?
-	rotation = angle_to_mouse
-	# Sprite and Camera inherits parent rot so we subtract to keep their 
-	# original rot so they lerp to new rot instead 
-	
-	# rotated(-rot)? unrotate()?
-
 	print("course set")
 	
 
