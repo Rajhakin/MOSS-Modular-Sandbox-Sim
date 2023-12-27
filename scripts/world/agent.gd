@@ -23,9 +23,7 @@ func  _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if data.current_status != Enums.AgentStatus.CONTROLLED:
-				get_viewport().set_input_as_handled()
-			elif data.current_status == Enums.AgentStatus.CONTROLLED:
+			if data.current_status == Enums.AgentStatus.CONTROLLED:
 				set_course()
 				get_viewport().set_input_as_handled()
 				
