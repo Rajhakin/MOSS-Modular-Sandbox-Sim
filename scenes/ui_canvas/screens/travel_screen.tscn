@@ -1,6 +1,5 @@
-[gd_scene load_steps=22 format=3 uid="uid://b2fr4yd46d64j"]
+[gd_scene load_steps=21 format=3 uid="uid://b2fr4yd46d64j"]
 
-[ext_resource type="Theme" uid="uid://df7cwbg23lfnf" path="res://assets/themes/default.tres" id="1_4yy6x"]
 [ext_resource type="Script" path="res://scripts/ui_canvas/screens/travel_screen.gd" id="1_a6pp1"]
 [ext_resource type="Material" uid="uid://c6u7mux44627q" path="res://assets/materials/blur.tres" id="2_jatin"]
 [ext_resource type="Texture2D" uid="uid://0ck405l211lr" path="res://assets/textures/user_interface/icons/boxicons/bx-slider.svg" id="3_66mlf"]
@@ -260,7 +259,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme = ExtResource("1_4yy6x")
 script = ExtResource("1_a6pp1")
 metadata/_edit_lock_ = true
 
@@ -292,7 +290,7 @@ texture_filter = 1
 layout_mode = 1
 offset_right = 35.0
 offset_bottom = 26.0
-text = "360°"
+text = "0°"
 label_settings = ExtResource("4_i6oav")
 vertical_alignment = 1
 

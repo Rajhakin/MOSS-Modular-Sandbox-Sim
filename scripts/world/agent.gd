@@ -5,7 +5,7 @@ class_name Agent
 ##  navigation: moving from waypoint to waypoint and dodge things along the way
 ##  filling needs based on data.needs
 
-@export var data := AgentData.new() 
+@export var data : AgentData
 
 var linear_velocity = Vector2.ZERO
 
@@ -36,7 +36,9 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 				control_agent()
 				get_viewport().set_input_as_handled()
 			# - this is here so controlled agent don't move toward clicked
-			# 	agent when double clicking it 
+			# 	agent when double clicking it
+			# TODO: physics pickable obj is last in input propagation order
+			# 		so might be useless, consider removal
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 				print("agent clicked")
 				get_viewport().set_input_as_handled()

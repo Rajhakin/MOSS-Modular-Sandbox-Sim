@@ -1,6 +1,6 @@
 extends Marker2D
 
-var target : Node2D
+var target : AgentData
 
 var zoom_default := Vector2(2, 2)
 var zoom_min : Vector2  = zoom_default * 0.25
@@ -13,7 +13,7 @@ var drag_sensitivity : float = 1.0
 
 
 func _input(event: InputEvent) -> void:
-	if not target:
+	if not target:		
 		if event is InputEventMouseMotion \
 				and Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE):
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -56,9 +56,9 @@ func _ready() -> void:
 func _physics_process(delta : float) -> void:
 	if target:# if instance valid? in case of deletion
 		position = target.position
-		rotation = target.rotation
+		rotation = target.rotation + deg_to_rad(90)
 
 		
 
 func _on_user_agent_set(agent):
-	target = agent
+	target = agent.data

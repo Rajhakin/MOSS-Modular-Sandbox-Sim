@@ -34,6 +34,9 @@ func _init() -> void:
 
 func _ready() -> void:
 	scale_world()
+	# - defered because travel screen does not receive user_agent_set signal
+	#	likely because only become ready and connect to it after been emitted
+	call_deferred("spawn_user_agent")
 
 
 func scale_world():
@@ -49,11 +52,19 @@ func scale_world():
 
 func spawn_agent(agent_data := AgentData.new()):
 	var new_agent = PreLoader.AGENT.instantiate()
+	new_agent.data = agent_data
+	new_agent.name = agent_data.name
 	$Agents.add_child(new_agent)
 	new_agent.position = agent_data.position
 	return new_agent
 	
 
+func spawn_user_agent():
+	var user_agent = spawn_agent(load("res://data/agent_data/user_agent_data.tres"))
+	user_agent.control_agent()
+	print("user_agent spawned: ", user_agent)
+	
+	
 # return agents and locations data, then node that called append to json 
 # 	or save in single resource file 
 func on_quit():
