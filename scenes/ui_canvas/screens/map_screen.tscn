@@ -1,0 +1,397 @@
+[gd_scene load_steps=18 format=3 uid="uid://yll5l64y7ppe"]
+
+[ext_resource type="Script" path="res://scripts/ui_canvas/screens/map_screen.gd" id="1_4hhar"]
+[ext_resource type="Texture2D" uid="uid://uo8bsg6vhyas" path="res://assets/textures/user_interface/parchmentBasic.png" id="1_grgu1"]
+[ext_resource type="Texture2D" uid="uid://bfnu6l7oeghrm" path="res://assets/textures/user_interface/Caravaneer-2-extended-map.png" id="1_v8m8f"]
+[ext_resource type="Texture2D" uid="uid://cx0y0a5nacklr" path="res://assets/textures/user_interface/icons/boxicons/bx-zoom-in.svg" id="2_cdlrs"]
+[ext_resource type="Texture2D" uid="uid://b3d31hou3qlmr" path="res://assets/textures/user_interface/icons/Cyberpunk/Skillicon7_004.png" id="2_l1qpq"]
+[ext_resource type="PackedScene" uid="uid://caga5us7vfyak" path="res://scenes/ui_canvas/elements/7_segments_display.tscn" id="3_i8jc1"]
+[ext_resource type="Texture2D" uid="uid://dj5mq6tt0vcxq" path="res://assets/textures/user_interface/icons/boxicons/bx-zoom-out.svg" id="3_j4kj5"]
+[ext_resource type="Texture2D" uid="uid://dci3vac8chdwo" path="res://assets/textures/user_interface/icons/boxicons/bx-restaurant.svg" id="4_x1nvy"]
+[ext_resource type="Texture2D" uid="uid://dgj507cjesl4g" path="res://assets/textures/user_interface/interfacePack_sheet@2.png" id="5_40nyj"]
+[ext_resource type="Texture2D" uid="uid://bqkuge6jvcls7" path="res://assets/textures/user_interface/icons/boxicons/bx-time.svg" id="6_r01wo"]
+[ext_resource type="Texture2D" uid="uid://bjmk1nekp2mt" path="res://assets/textures/user_interface/icons/boxicons/bx-trip.svg" id="7_81oaw"]
+[ext_resource type="Texture2D" uid="uid://c41k6r3m52mak" path="res://assets/textures/user_interface/icons/boxicons/bx-tachometer.svg" id="8_qdjmv"]
+[ext_resource type="Texture2D" uid="uid://ciu5uv00wejtd" path="res://assets/textures/user_interface/icons/boxicons/bx-grass.svg" id="11_8ti5n"]
+[ext_resource type="Texture2D" uid="uid://bb8145ru70ko2" path="res://assets/textures/user_interface/icons/boxicons/bx-gas-pump.svg" id="12_1er7y"]
+[ext_resource type="FontFile" uid="uid://cjidlwh6vfvgr" path="res://assets/fonts/OperationNapalm-Italic.ttf" id="13_i7ar3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujsdk"]
+bg_color = Color(0.0755101, 0.0755101, 0.0755101, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hps1t"]
+atlas = ExtResource("5_40nyj")
+region = Rect2(400, 856, 32, 32)
+
+[node name="MapScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4hhar")
+
+[node name="PanelContainer" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"DisplayPanelContainer"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 36
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Map" type="Panel" parent="PanelContainer/MarginContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ujsdk")
+
+[node name="Background" type="ColorRect" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+visible = false
+clip_contents = true
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.905882, 0.811765, 0.678431, 1)
+
+[node name="Paper" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/Map/Background"]
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_grgu1")
+stretch_mode = 1
+
+[node name="Background2" type="ColorRect" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+visible = false
+clip_contents = true
+layout_mode = 2
+offset_right = 1742.0
+offset_bottom = 1044.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+
+[node name="Landmarks" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+visible = false
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/Map/ScrollContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("1_v8m8f")
+
+[node name="ZoomController" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -186.0
+offset_right = 64.0
+offset_bottom = 186.0
+grow_vertical = 2
+
+[node name="ZoomInButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/Map/ZoomController"]
+layout_mode = 2
+icon = ExtResource("2_cdlrs")
+icon_alignment = 1
+
+[node name="ZoomSlider" type="VSlider" parent="PanelContainer/MarginContainer/HBoxContainer/Map/ZoomController"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 1
+min_value = 1.0
+value = 1.0
+exp_edit = true
+
+[node name="ZoomOutButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/Map/ZoomController"]
+layout_mode = 2
+icon = ExtResource("3_j4kj5")
+icon_alignment = 1
+
+[node name="Markers" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+visible = false
+layout_mode = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Marker" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/Map/Markers"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 528.0
+offset_right = 501.0
+offset_bottom = 568.0
+texture = SubResource("AtlasTexture_hps1t")
+flip_v = true
+
+[node name="Route" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+layout_mode = 2
+anchors_preset = 0
+offset_right = 1742.0
+offset_bottom = 1044.0
+
+[node name="Grid" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/Map"]
+layout_mode = 2
+anchors_preset = 0
+offset_right = 1742.0
+offset_bottom = 1044.0
+
+[node name="RouteInfoDisplay" type="MarginContainer" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 36
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay"]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DisplayPanelContainer"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 7
+theme_override_constants/v_separation = 7
+columns = 3
+
+[node name="_" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+modulate = Color(1, 1, 1, 0.75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("13_i7ar3")
+text = "Route Information"
+horizontal_alignment = 1
+
+[node name="_2" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+tooltip_text = "Speed"
+texture = ExtResource("8_qdjmv")
+stretch_mode = 3
+
+[node name="TimeDisplay" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+size_flags_horizontal = 0
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+modulate = Color(1, 1, 1, 0.75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("13_i7ar3")
+text = "Km/h"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+tooltip_text = "Distance"
+texture = ExtResource("7_81oaw")
+stretch_mode = 3
+
+[node name="TimeDisplay2" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+size_flags_horizontal = 0
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+modulate = Color(1, 1, 1, 0.75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("13_i7ar3")
+text = "Km"
+horizontal_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+tooltip_text = "Travel Time"
+texture = ExtResource("6_r01wo")
+stretch_mode = 3
+
+[node name="TimeDisplay3" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+size_flags_horizontal = 0
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer/MarginContainer/GridContainer"]
+modulate = Color(1, 1, 1, 0.75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("13_i7ar3")
+text = "h"
+horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DisplayPanelContainer"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="VBoxContainer2" type="GridContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 7
+theme_override_constants/v_separation = 7
+columns = 2
+
+[node name="_" type="Control" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+modulate = Color(1, 1, 1, 0.75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("13_i7ar3")
+text = "Supplies
+Needed / Available"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Water"
+texture = ExtResource("2_l1qpq")
+stretch_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="WaterDisplay" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer2" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="WaterDisplay2" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer2" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+modulate = Color(0.701961, 0.701961, 0.701961, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Food"
+texture = ExtResource("4_x1nvy")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="FoodDisplay" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="FoodDisplay2" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Animal Food"
+texture = ExtResource("11_8ti5n")
+stretch_mode = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="GrassDisplay" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer3" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="GrassDisplay2" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer3" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="TextureRect4" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+modulate = Color(0.7, 0.7, 0.7, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Fuel"
+texture = ExtResource("12_1er7y")
+stretch_mode = 3
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="FuelDisplay" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer4" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7
+
+[node name="FuelDisplay2" parent="PanelContainer/MarginContainer/HBoxContainer/RouteInfoDisplay/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer2/VBoxContainer4" instance=ExtResource("3_i8jc1")]
+layout_mode = 2
+display_type = "Thousand Separation"
+visible_characters = 7

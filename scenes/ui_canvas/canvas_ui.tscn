@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5r5xjcw5t1ua"]
+[gd_scene load_steps=16 format=3 uid="uid://b5r5xjcw5t1ua"]
 
 [ext_resource type="Script" path="res://scripts/ui_canvas/canvas_ui.gd" id="1_jswlo"]
 [ext_resource type="PackedScene" uid="uid://b2fr4yd46d64j" path="res://scenes/ui_canvas/screens/travel_screen.tscn" id="2_fydh4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Theme" uid="uid://dgoxaxwow6jex" path="res://assets/themes/console.tres" id="5_a5eh0"]
 [ext_resource type="Script" path="res://scripts/ui_canvas/screens/debug_screen.gd" id="5_o4tu5"]
 [ext_resource type="Script" path="res://scripts/ui_canvas/screens/setting_screen.gd" id="6_j3cb4"]
+[ext_resource type="PackedScene" uid="uid://yll5l64y7ppe" path="res://scenes/ui_canvas/screens/map_screen.tscn" id="7_870uf"]
 [ext_resource type="Material" uid="uid://cc4sfajbgfcr3" path="res://assets/materials/sharpness.tres" id="7_x3jts"]
 [ext_resource type="Material" uid="uid://fpash1rpwmjw" path="res://assets/materials/grain.tres" id="8_qj7r5"]
 [ext_resource type="Material" uid="uid://dc2yjmgibjdxb" path="res://assets/materials/TV.tres" id="9_usirm"]
@@ -66,8 +67,7 @@ theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 200
 metadata/_edit_lock_ = true
 
-[node name="MapScreen" type="Control" parent="PDA"]
-visible = false
+[node name="MapScreen" parent="PDA" instance=ExtResource("7_870uf")]
 layout_mode = 2
 
 [node name="CaravanScreen" type="Control" parent="PDA"]

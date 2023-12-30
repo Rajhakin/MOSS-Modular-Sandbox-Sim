@@ -448,7 +448,6 @@ visible = false
 texture = ExtResource("3_kcyde")
 
 [node name="Regions" type="Node2D" parent="."]
-visible = false
 
 [node name="Trinity" type="Node2D" parent="Regions"]
 

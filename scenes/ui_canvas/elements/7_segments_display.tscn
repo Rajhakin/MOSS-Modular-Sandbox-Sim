@@ -5,6 +5,7 @@
 [ext_resource type="LabelSettings" uid="uid://bmfjp4gn5vl48" path="res://assets/fonts/E1234.tres" id="3_qsoea"]
 
 [node name="Display" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 30)
 theme_type_variation = &"DisplayContainer"
 script = ExtResource("1_psruc")
 

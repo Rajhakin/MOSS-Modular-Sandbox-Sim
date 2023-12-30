@@ -12,7 +12,7 @@ extends Node
 
 func _ready():
 	load_state()# move to init?
-	#get_tree().paused = true
+	get_tree().paused = true
 	
 
 func _notification(what: int) -> void:
