@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfnu6l7oeghrm"
-path="res://.godot/imported/Caravaneer-2-extended-map.png-c90a16e72ba1b9365575d496210c796a.ctex"
+uid="uid://dgj507cjesl4g"
+path="res://.godot/imported/interfacePack_sheet@2.png-f40e819b6b0ca27de2d585402761d83e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/user_interface/Caravaneer-2-extended-map.png"
-dest_files=["res://.godot/imported/Caravaneer-2-extended-map.png-c90a16e72ba1b9365575d496210c796a.ctex"]
+source_file="res://assets/textures/user_interface/cartography/interfacePack_sheet@2.png"
+dest_files=["res://.godot/imported/interfacePack_sheet@2.png-f40e819b6b0ca27de2d585402761d83e.ctex"]
 
 [params]
 

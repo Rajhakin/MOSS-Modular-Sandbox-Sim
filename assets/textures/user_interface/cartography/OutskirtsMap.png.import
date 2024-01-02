@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dketg08sdl3kl"
-path="res://.godot/imported/spritesheet_retina.png-4272f9697ee9661cba72304d50a93907.ctex"
+uid="uid://sc36fdfhlv6x"
+path="res://.godot/imported/OutskirtsMap.png-c9bce7027d66be0e23a118324bf860df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/user_interface/spritesheet_retina.png"
-dest_files=["res://.godot/imported/spritesheet_retina.png-4272f9697ee9661cba72304d50a93907.ctex"]
+source_file="res://assets/textures/user_interface/cartography/OutskirtsMap.png"
+dest_files=["res://.godot/imported/OutskirtsMap.png-c9bce7027d66be0e23a118324bf860df.ctex"]
 
 [params]
 

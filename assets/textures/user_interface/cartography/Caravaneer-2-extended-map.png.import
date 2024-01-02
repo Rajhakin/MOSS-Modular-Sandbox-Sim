@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sc36fdfhlv6x"
-path="res://.godot/imported/OutskirtsMap.png-90188d783518179a5653cc43c6566c2e.ctex"
+uid="uid://bfnu6l7oeghrm"
+path="res://.godot/imported/Caravaneer-2-extended-map.png-382587e27398335df33e9d2e28fdb2f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/user_interface/OutskirtsMap.png"
-dest_files=["res://.godot/imported/OutskirtsMap.png-90188d783518179a5653cc43c6566c2e.ctex"]
+source_file="res://assets/textures/user_interface/cartography/Caravaneer-2-extended-map.png"
+dest_files=["res://.godot/imported/Caravaneer-2-extended-map.png-382587e27398335df33e9d2e28fdb2f1.ctex"]
 
 [params]
 
