@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2gcmy0v6gv5s"]
+
+[ext_resource type="Script" path="res://scripts/world/rts_camera.gd" id="1_ebe1q"]
+
+[node name="CameraPivot" type="Marker2D"]
+process_mode = 3
+script = ExtResource("1_ebe1q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 1.0
